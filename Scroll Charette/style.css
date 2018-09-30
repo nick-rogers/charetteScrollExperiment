@@ -1,0 +1,21 @@
+body {
+	margin: 0;
+	overflow: auto;
+	touch-action: none;
+}
+
+.thing {
+	display: block;
+	width: 100vw;
+	height: 200px;
+	background-color: red;
+	z-index: 100;
+}
+
+.re {
+	display: block;
+	background-color: red;
+	height: 800px;
+	width: 100vw;
+	margin-top: 150%;
+}
