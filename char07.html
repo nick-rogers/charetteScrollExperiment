@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <title>Scroll 4</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    .b {
+      height: 100vh;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .re {
+      position: fixed;
+      background-color: red;
+      height: 33vh;
+      width: 33vw;
+      top: 0;
+      margin-left: 33vw;
+      margin-top: 33vw;
+      z-index: 100;
+    }
+
+    .children {
+      display: inline-block;
+      width: 80%;
+      height: 80%;
+      margin-top: 15%;
+      margin-left: 10%;
+    }
+
+
+    </style>
+  </head>
+  <body onclick="doubletap()">
+
+    <div id="skrollr-body" class="b">
+
+    </div>
+
+    <div class="re" data-0="transform: scale(1);" data-400="transform: scale(1.5);" data-800="transform: scale(2);" data-1200="transform: scale(2.5);" data-1600="transform: scale(3);" data-2000="transform: scale(3.5);" data-2400="transform: scale(4);" data-2800="transform: scale(4.5);" data-3200="transform: scale(5);" data-3600="transform: scale(5.5);">
+        <div class="children" style="background-color: orange">
+          <div class="children" style="background-color: yellow">
+            <div class="children" style="background-color: lightgreen">
+              <div class="children" style="background-color: green">
+                <div class="children" style="background-color: cyan">
+                  <div class="children" style="background-color: blue">
+                    <div class="children" style="background-color: purple">
+                      <div class="children" style="background-color: red">
+                        <div class="children" style="background-color: orange">
+                          <div class="children" style="background-color: yellow">
+                            <div class="children" style="background-color: lightgreen">
+                              <div class="children" style="background-color: green">
+                                <div class="children" style="background-color: cyan">
+                                  <div class="children" style="background-color: blue"><div class="children" style="background-color: purple"><div class="children" style="background-color: black"></div></div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+
+
+
+  <script type="text/javascript">
+
+      var s = skrollr.init();
+
+
+      var mylatesttap;
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char08.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

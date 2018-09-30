@@ -5,24 +5,23 @@
   <head>
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
-    <title>Scroll 2</title>
+    <title>Scroll 4</title>
   	<link rel="stylesheet" href="style.css" type="text/css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   	<style>
 
 		.b {
-			height: 5000px;
+			height: 100vh;
       text-align: center;
+      background-color: blue;
 		}
 
 		.re {
 			display: inline-block;
 			background-color: black;
-			height: 800px;
-			width: 300px;
-			margin-top: 150%;
-      transition: ease all 0.2s;
+			height: 3000px;
+			width: 100vw;
 		}
 
 
@@ -31,7 +30,9 @@
   <body onclick="doubletap()">
 
   	<div id="skrollr-body" class="b">
-  		<div class="re" data-center-top="transform: rotate(180deg);" data-top-top="transform: rotate(360deg);"></div>
+
+  		<div class="re" data-0="transform: scale(1);" data-400="transform: scale(0.9);" data-800="transform: scale(0.8);" data-1200="transform: scale(0.7);" data-1600="transform: scale(0.6);" data-2000="transform: scale(0.5);" data-2400="transform: scale(0.4);" data-2800="transform: scale(0.3);" data-3200="transform: scale(0.2);" data-3600="transform: scale(0.1);"></div>
+
   	</div>
 
 	<script type="text/javascript" src="skrollr.min.js"></script>
@@ -55,7 +56,7 @@
 
           console.log('double tap'); 
 
-          window.location.replace("char03.html");  
+          window.location.replace("char05.html");  
 
          }else{
                   // too much time to be a doubletap
