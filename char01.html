@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Scroll 1</title>
+  	<link rel="stylesheet" href="style.css" type="text/css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  	<style>
+
+		.b {
+			height: 8000px;
+		}
+
+		.re {
+			display: block;
+			background-color: red;
+			height: 800px;
+			width: 100vw;
+			margin-top: 150%;
+		}
+
+  	</style>
+  </head>
+  <body>
+
+  	<div id="skrollr-body" class="b">
+  		<div class="re" data-center-top="background-color:rgb(0,0,255);" data-top-top="background-color:rgb(255,0,0);"></div>
+  	</div>
+
+  	<script src="script.js"></script>
+	<script type="text/javascript" src="skrollr.min.js"></script>
+	<script type="text/javascript">
+
+      var s = skrollr.init();
+
+	</script>
+  </body>
+</html>
