@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <title>Scroll 11</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    .b {
+      height: 3000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .con {
+      display: inline-block;
+      position: absolute;
+      width: 100vw;
+      height: 20px;
+      transform-style: preserve-3d;
+      transform: rotateZ(30deg);
+      perspective-origin: 10% 10%;
+      margin-top: -800px;
+    }
+
+    .lines {
+      position: absolute;
+      display: inline-block;
+      width: 15px;
+      height: 10000px;
+      background-color: blue;
+    }
+
+    </style>
+  </head>
+  <body onclick="doubletap()">
+
+
+
+    <div id="skrollr-body" class="b">
+      <!--<div class="re" data-0="transform: scale(1); transform: rotate(0deg);"  data-1000="transform: scale(7); transform: rotate(360deg);">
+      </div>-->
+
+      <div class="con">
+        <div class="lines" style="margin-left: 50px;"></div>
+        <div class="lines" style="margin-left: 100px;"></div>
+        <div class="lines" style="margin-left: 150px;"></div>
+        <div class="lines" style="margin-left: 200px;"></div>
+        <div class="lines" style="margin-left: 250px;"></div>
+        <div class="lines" style="margin-left: 300px;"></div>
+        <div class="lines" style="margin-left: 350px;"></div>
+        <div class="lines" style="margin-left: 400px;"></div>
+        <div class="lines" style="margin-left: 450px;"></div>
+        <div class="lines" style="margin-left: 500px;"></div>
+        <div class="lines" style="margin-left: 550px;"></div>
+        <div class="lines" style="margin-left: 600px;"></div>
+        <div class="lines" style="margin-left: 650px;"></div>
+        <div class="lines" style="margin-left: 700px;"></div>
+      </div>
+
+      <div class="con" style="margin-top: 0px">
+        <div class="lines" style="margin-left: 50px;"></div>
+        <div class="lines" style="margin-left: 100px;"></div>
+        <div class="lines" style="margin-left: 150px;"></div>
+        <div class="lines" style="margin-left: 200px;"></div>
+        <div class="lines" style="margin-left: 250px;"></div>
+        <div class="lines" style="margin-left: 300px;"></div>
+        <div class="lines" style="margin-left: 350px;"></div>
+        <div class="lines" style="margin-left: 400px;"></div>
+        <div class="lines" style="margin-left: 450px;"></div>
+        <div class="lines" style="margin-left: 500px;"></div>
+        <div class="lines" style="margin-left: 550px;"></div>
+        <div class="lines" style="margin-left: 600px;"></div>
+        <div class="lines" style="margin-left: 650px;"></div>
+        <div class="lines" style="margin-left: 700px;"></div>
+      </div>
+
+      <div class="con" style="margin-top: 800px">
+        <div class="lines" style="margin-left: 50px;"></div>
+        <div class="lines" style="margin-left: 100px;"></div>
+        <div class="lines" style="margin-left: 150px;"></div>
+        <div class="lines" style="margin-left: 200px;"></div>
+        <div class="lines" style="margin-left: 250px;"></div>
+        <div class="lines" style="margin-left: 300px;"></div>
+        <div class="lines" style="margin-left: 350px;"></div>
+        <div class="lines" style="margin-left: 400px;"></div>
+        <div class="lines" style="margin-left: 450px;"></div>
+        <div class="lines" style="margin-left: 500px;"></div>
+        <div class="lines" style="margin-left: 550px;"></div>
+        <div class="lines" style="margin-left: 600px;"></div>
+        <div class="lines" style="margin-left: 650px;"></div>
+        <div class="lines" style="margin-left: 700px;"></div>
+      </div>
+
+      <div class="con" style="margin-top: 1600px">
+        <div class="lines" style="margin-left: 50px;"></div>
+        <div class="lines" style="margin-left: 100px;"></div>
+        <div class="lines" style="margin-left: 150px;"></div>
+        <div class="lines" style="margin-left: 200px;"></div>
+        <div class="lines" style="margin-left: 250px;"></div>
+        <div class="lines" style="margin-left: 300px;"></div>
+        <div class="lines" style="margin-left: 350px;"></div>
+        <div class="lines" style="margin-left: 400px;"></div>
+        <div class="lines" style="margin-left: 450px;"></div>
+        <div class="lines" style="margin-left: 500px;"></div>
+        <div class="lines" style="margin-left: 550px;"></div>
+        <div class="lines" style="margin-left: 600px;"></div>
+        <div class="lines" style="margin-left: 650px;"></div>
+        <div class="lines" style="margin-left: 700px;"></div>
+      </div>
+
+      <div class="con" style="margin-top: 2400px">
+        <div class="lines" style="margin-left: 50px;"></div>
+        <div class="lines" style="margin-left: 100px;"></div>
+        <div class="lines" style="margin-left: 150px;"></div>
+        <div class="lines" style="margin-left: 200px;"></div>
+        <div class="lines" style="margin-left: 250px;"></div>
+        <div class="lines" style="margin-left: 300px;"></div>
+        <div class="lines" style="margin-left: 350px;"></div>
+        <div class="lines" style="margin-left: 400px;"></div>
+        <div class="lines" style="margin-left: 450px;"></div>
+        <div class="lines" style="margin-left: 500px;"></div>
+        <div class="lines" style="margin-left: 550px;"></div>
+        <div class="lines" style="margin-left: 600px;"></div>
+        <div class="lines" style="margin-left: 650px;"></div>
+        <div class="lines" style="margin-left: 700px;"></div>
+      </div>
+
+    </div>
+
+
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init();
+
+
+      var mylatesttap;
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char12.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

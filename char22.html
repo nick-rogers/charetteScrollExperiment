@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <title>Scroll 22</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+    background-color: white;
+    }
+
+    .b {
+      height: 1000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .con {
+      position: fixed;
+      display: inline-block;
+      width: 100vw;
+      height: 100vh;
+      bottom: 0;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background-color: black;
+    }
+
+    
+    </style>
+  </head>
+  <body onclick="doubletap()">
+
+
+
+    <div id="skrollr-body" class="b">
+    </div>
+
+    <div class="con" data-0="clip-path: polygon(50% 100%, 0% 100%, 100% 100%);" data-1000="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);">
+    </div>
+
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init();
+
+
+      var mylatesttap;
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char23.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

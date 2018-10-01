@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
+    <title>Scroll 21</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+    background-color: white;
+    }
+
+    .b {
+      height: 1000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .con {
+      position: fixed;
+      display: inline-block;
+      width: 550px;
+      height: 550px;
+      margin-left: -28%;
+      margin-top: 5%;
+      top: 0;
+      clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+      background-color: yellow;
+    }
+
+    .con2 {
+      position: fixed;
+      display: inline-block;
+      width: 550px;
+      height: 550px;
+      margin-left: -28%;
+      margin-top: 5%;
+      top: 0;
+      clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+      background-color: red;
+    }
+
+    .con3 {
+      position: fixed;
+      display: inline-block;
+      width: 550px;
+      height: 550px;
+      margin-left: -28%;
+      margin-top: 5%;
+      top: 0;
+      clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+      background-color: orange;
+    }
+
+    
+    </style>
+  </head>
+  <body onclick="doubletap()">
+
+
+
+    <div id="skrollr-body" class="b">
+    </div>
+
+    <div class="con" data-0="transform: rotate(0deg);" data-1000="transform: rotate(1000deg);">
+    </div>
+
+    <div class="con2" data-0="transform: rotate(30deg);" data-1000="transform: rotate(1000deg);">
+    </div>
+
+    <div class="con3" data-0="transform: rotate(60deg);" data-1000="transform: rotate(1000deg);">
+    </div>
+
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init();
+
+
+      var mylatesttap;
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char22.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>
