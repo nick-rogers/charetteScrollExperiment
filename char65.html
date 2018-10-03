@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 65</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .letter {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      height: 100vw;
+      top: 0vw;
+      z-index: 100;
+      font-size: 80vw;
+      font-family: sans-serif;
+      text-align: center;
+      line-height: 0vh;
+      font-weight: 100;
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <p class="letter" data-0p="font-weight: 100;" data-100p="font-weight: 900;">0</p>
+
+    ></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char66.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

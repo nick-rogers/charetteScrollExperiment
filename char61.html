@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 61</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .bend1 {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      height: 100vw;
+      top: 20vw;
+      z-index: 100;
+      background-color: black;
+      clip-path: ellipse(40% 40% at 50% 50%);
+      background: rgb(240,249,255); /* Old browsers */
+      background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#000000',GradientType=0 );
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="bend1" data-0p="clip-path: ellipse(40% 40% at 50% 50%);"
+
+    data-100p="clip-path: ellipse(10% 40% at 50% 50%);"
+
+    ></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char62.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 69</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background: rgb(255,255,255);
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .bend1 {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      top: 0vh;
+      z-index: 100;
+      background-color: black;
+      clip-path: polygon(24% 87%, 29% 74%, 18% 66%, 31% 58%, 19% 48%, 31% 42%, 11% 29%, 33% 23%, 24% 12%, 40% 10%, 47% 16%, 53% 11%, 59% 14%, 73% 11%, 76% 23%, 81% 32%, 65% 35%, 70% 48%, 87% 51%, 81% 61%, 71% 66%, 76% 73%, 80% 81%, 70% 88%, 61% 84%, 57% 94%, 48% 87%, 43% 93%, 31% 94%);
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="bend1" data-0p="clip-path: polygon(24% 87%, 29% 74%, 18% 66%, 31% 58%, 19% 48%, 31% 42%, 11% 29%, 33% 23%, 24% 12%, 40% 10%, 47% 16%, 53% 11%, 59% 14%, 73% 11%, 76% 23%, 81% 32%, 65% 35%, 70% 48%, 87% 51%, 81% 61%, 71% 66%, 76% 73%, 80% 81%, 70% 88%, 61% 84%, 57% 94%, 48% 87%, 43% 93%, 31% 94%); background-color: black;"
+
+    data-100p="clip-path: polygon(23% 95%, 72% 59%, 6% 64%, 88% 53%, 19% 48%, 31% 42%, 5% 32%, 93% 40%, 15% 8%, 40% 10%, 35% 51%, 53% 11%, 49% 71%, 73% 11%, 11% 34%, 94% 25%, 10% 18%, 67% 49%, 1% 55%, 28% 59%, 71% 66%, 13% 73%, 82% 78%, 79% 96%, 20% 78%, 60% 97%, 71% 71%, 43% 93%, 41% 65%); background-color: red;"
+
+    ></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char70.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 68</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background: rgb(255,255,255); /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 4%, rgba(0,0,255,1) 100%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 4%,rgba(0,0,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, rgba(255,255,255,1) 4%,rgba(0,0,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0000ff',GradientType=1 );
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .bend1 {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      top: 0vh;
+      z-index: 100;
+      background-color: blue;
+      clip-path: polygon(0% 10%, 15% 15%, 10% 0%, 90% 0%, 85% 15%, 100% 10%, 100% 90%, 85% 85%, 90% 100%, 10% 100%, 15% 85%, 0% 90%);
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="bend1" data-0p="clip-path: polygon(0% 10%, 15% 15%, 10% 0%, 90% 0%, 85% 15%, 100% 10%, 100% 90%, 85% 85%, 90% 100%, 10% 100%, 15% 85%, 0% 90%);"
+
+    data-100p="clip-path: polygon(0% 10%, 49% 52%, 10% 0%, 90% 0%, 49% 52%, 100% 10%, 100% 90%, 49% 52%, 90% 100%, 10% 100%, 49% 52%, 0% 90%);"
+
+    ></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char69.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>
