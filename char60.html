@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 60</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .bend1 {
+      display: block;
+      position: absolute;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      clip-path: polygon(50% 0%, 100% 0%, 100% 35%, 100% 70%, 100% 100%, 0% 100%, 0% 70%, 0% 35%, 0% 0%);
+      z-index: 100;
+      background-color: black;
+    }
+
+    .bend2 {
+      display: block;
+      position: absolute;
+      z-index: 150;
+      width: 60vw;
+      height: 100vh;
+      top: 0;
+      margin-left: 20vw;
+      clip-path: polygon(50% 0%, 100% 0%, 100% 35%, 100% 70%, 100% 100%, 0% 100%, 0% 70%, 0% 35%, 0% 0%);
+      z-index: 100;
+      background-color: white;
+    }
+
+    .bend3 {
+      display: block;
+      position: absolute;
+      z-index: 170;
+      width: 40vw;
+      height: 100vh;
+      top: 0;
+      margin-left: 30vw;
+      clip-path: polygon(50% 0%, 100% 0%, 100% 35%, 100% 70%, 100% 100%, 0% 100%, 0% 70%, 0% 35%, 0% 0%);
+      z-index: 100;
+      background-color: black;
+    }
+
+    .bend4 {
+      display: block;
+      position: absolute;
+      z-index: 190;
+      width: 20vw;
+      height: 100vh;
+      top: 0;
+      margin-left: 40vw;
+      clip-path: polygon(50% 0%, 100% 0%, 100% 35%, 100% 70%, 100% 100%, 0% 100%, 0% 70%, 0% 35%, 0% 0%);
+      z-index: 100;
+      background-color: white;
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="bend1" data-0p="clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);"
+
+    data-100p="clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);"
+
+    ></div>
+
+    <div class="bend2" data-0p="clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);"
+
+    data-100p="clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);"
+
+    ></div>
+
+    <div class="bend3" data-0p="clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);"
+
+    data-100p="clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);"
+
+    ></div>
+
+    <div class="bend4" data-0p="clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);"
+
+    data-100p="clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);"
+
+    ></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char61.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>

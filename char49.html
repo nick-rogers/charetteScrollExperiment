@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 49</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .jump1 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 40vh;
+      margin-top: 30vh;
+      background-color: red;
+      z-index: 100;
+    }
+
+    .jump2 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 60vh;
+      margin-top: 20vh;
+      background-color: blue;
+      z-index: 90;
+    }
+
+    .jump3 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 80vh;
+      margin-top: 10vh;
+      background-color: yellow;
+      z-index: 80;
+    }
+
+    .jump4 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: green;
+      z-index: 70;
+    }
+
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="jump1" data-0p="border-radius: 0vw;" data-100p="border-radius: 100vw;"></div>
+    <div class="jump2" data-0p="border-radius: 0vw;" data-100p="border-radius: 100vw;"></div>
+    <div class="jump3" data-0p="border-radius: 0vw;" data-100p="border-radius: 100vw;"></div>
+    <div class="jump4" data-0p="border-radius: 0vw;" data-100p="border-radius: 100vw;"></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char50.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>
+

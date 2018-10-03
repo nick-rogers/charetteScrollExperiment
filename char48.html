@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 48</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+      background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .jump1 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 30vh;
+      background-color: red;
+      z-index: 100;
+    }
+
+    .jump2 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 40vh;
+      background-color: blue;
+      z-index: 90;
+    }
+
+    .jump3 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 50vh;
+      background-color: yellow;
+      z-index: 80;
+    }
+
+    .jump4 {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 60vh;
+      background-color: green;
+      z-index: 70;
+    }
+
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="jump1" data-0p="height: 30vh;" data-80p="height: 30vh;" data-90p="height: 100vh;"></div>
+    <div class="jump2" data-0p="height: 40vh;" data-60p="height: 40vh;" data-70p="height: 100vh;"></div>
+    <div class="jump3" data-0p="height: 50vh;" data-40p="height: 50vh;" data-50p="height: 100vh;"></div>
+    <div class="jump4" data-0p="height: 60vh;" data-20p="height: 60vh;" data-30p="height: 100vh;"></div>
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char49.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>
+

@@ -4,15 +4,15 @@
 
   <head>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
-    <title>Scroll 29</title>
+
+    <title>Scroll 50</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <style>
 
     body {
-    background-color: white;
+      background-color: white;
     }
 
     .b {
@@ -21,39 +21,47 @@
       z-index: 10;
     }
 
-    .con {
-      position: fixed;
-      display: inline-block;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      background-color: white;
-      border: 6px solid red;
-      box-sizing: border-box;
+    .jump1 {
+      display: block;
+      position: absolute;
+      top: 0vh;
+      width: 80vh;
+      height: 80vh;
+      background-color: red;
       z-index: 100;
+      border-radius: 100vw;
     }
 
-    
-    </style>
+
+    </style> 
+
   </head>
-  <body onclick="doubletap()">
+  <body onclick="doubletap()"> 
 
 
-    <div id="skrollr-body" class="b">
+    <div id="skrollr-body" class="b"> 
     </div>
 
-    <div class="con" data-0="border: 6px solid red;" data-1500="border: 450px solid red;">
-    </div>
+    <div class="jump1" data-0p="top: 0vh;" 
 
+    data-50p="top: 51vh;"
+
+    data-70p="top: 45vh;"
+
+    data-80p="top: 51vh;"
+
+    data-90p="top: 49vh;"
+
+    data-100p="top: 51vh;"></div>
 
 
   <script type="text/javascript" src="skrollr.min.js"></script>
   <script type="text/javascript">
 
-      var s = skrollr.init();
+      var s = skrollr.init(); 
 
 
-      var mylatesttap;
+      var mylatesttap; 
 
       // Double tap function 
 
@@ -65,7 +73,7 @@
 
           console.log('double tap'); 
 
-          window.location.replace("char30.html");  
+          window.location.replace("char51.html");  
 
          }else{
                   // too much time to be a doubletap
@@ -79,3 +87,4 @@
   </script>
   </body>
 </html>
+

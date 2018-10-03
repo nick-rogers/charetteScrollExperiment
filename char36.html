@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Scroll 36</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+    body {
+    background-color: white;
+    }
+
+    .b {
+      height: 2000px;
+      text-align: center;
+      z-index: 10;
+    }
+
+    .line {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 1vw;
+      height: 100vh;
+      background-color: darkblue;
+    }
+
+    .l1 {
+      margin-left: 0vw;
+    }
+
+    .l2 {
+      margin-left: 8.6vw;
+    }
+
+    .l3 {
+      margin-left: 17.2vw;
+    }
+
+    .l4 {
+      margin-left: 25.8vw;
+    }
+
+    .l5 {
+      margin-left: 34.4vw;
+    }
+
+    .l6 {
+      margin-left: 43.0vw;
+    }
+
+    .l7 {
+      margin-left: 51.6vw;
+    }
+
+    .l8 {
+      margin-left: 60.2vw;
+    }
+
+    .l9 {
+      margin-left: 68.8vw;
+    }
+
+    .l10 {
+      margin-left: 77.4vw;
+    }
+
+    .l11 {
+      margin-left: 86.0vw;
+    }
+
+    .l12 {
+      margin-left: 94.6vw;
+    }
+
+
+    .wrap {
+      background-color: blue;
+      margin-left: 2.5vw;
+    }
+
+    </style> 
+
+  </head>
+  <body onclick="doubletap()"> 
+
+
+    <div id="skrollr-body" class="b"> 
+    </div>
+
+    <div class="wrap">
+      <div class="line l1" data-0p="height: 0vh;" data-100p="height: 100vh;"></div>
+      <div class="line l2"  data-0p="height: 0vh;" data-80p="height: 100vh;"></div>
+      <div class="line l3"  data-0p="height: 0vh;" data-60p="height: 100vh;"></div>
+      <div class="line l4"  data-0p="height: 0vh;" data-40p="height: 100vh;"></div>
+      <div class="line l5"  data-0p="height: 0vh;" data-20p="height: 100vh;"></div>
+      <div class="line l6"  data-0p="height: 0vh;" data-10p="height: 100vh;"></div>
+      <div class="line l7"  data-0p="height: 0vh;" data-10p="height: 100vh;"></div>
+      <div class="line l8"  data-0p="height: 0vh;" data-20p="height: 100vh;"></div>
+      <div class="line l9"  data-0p="height: 0vh;" data-40p="height: 100vh;"></div>
+      <div class="line l10"  data-0p="height: 0vh;" data-60p="height: 100vh;"></div> 
+      <div class="line l11"  data-0p="height: 0vh;" data-80p="height: 100vh;"></div>
+      <div class="line l12"  data-0p="height: 0vh;" data-100p="height: 100vh;"></div>
+    </div>
+
+
+
+  <script type="text/javascript" src="skrollr.min.js"></script>
+  <script type="text/javascript">
+
+      var s = skrollr.init(); 
+
+
+      var mylatesttap; 
+
+      // Double tap function 
+
+      function doubletap() {
+
+         var now = new Date().getTime();
+         var timesince = now - mylatesttap;
+         if((timesince < 600) && (timesince > 0)){
+
+          console.log('double tap'); 
+
+          window.location.replace("char37.html");  
+
+         }else{
+                  // too much time to be a doubletap
+               }
+
+         mylatesttap = new Date().getTime();
+
+      }
+
+
+  </script>
+  </body>
+</html>
+
+
+
+
+
+
